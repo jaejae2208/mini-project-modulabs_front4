@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1만 시간의 법칙</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!-- reset.css 및 스타일 시트 -->
+    <link rel="stylesheet" href="../common/css/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="col-center">
+    <header class="center">
+      <h1 class="col-center">
+        <img src="img/clock.png" alt="시계 배경" class="center" />
+        <img src="img/title.png" alt="1만 시간의 법칙" class="center" />
+      </h1>
+    </header>
+    <main class="col-center">
+      <!-- 웹 페이지 주제와 관련된 인용구 section -->
+      <section class="quote col-center">
+        <q class="center">연습은 어제의 당신보다 당신을 더 낫게 만든다.</q>
+        <div class="quote-group">
+          <p><em>1만 시간의 법칙</em> 은</p>
+          <p>어떤 분야의 전문가가 되기 위해서는</p>
+          <p>최소한 1만 시간의 훈련이 필요다는 법칙이다.</p>
+        </div>
+      </section>
+      <!-- 웹 페이지 주 기능 관련 section-->
+      <section>
+        <form id="planForm" class="col-center">
+          <div class="first-line center">
+            <p class="center">나는</p>
+            <input
+              type="text"
+              id="field"
+              name="field"
+              placeholder="예)프로그래밍"
+              required
+              class="topic"
+            />
+            <p class="center">전문가가 될 것이다.</p>
+          </div>
+          <div class="second-line center">
+            <p class="center">그래서 앞으로 매일 하루에</p>
+            <input
+              type="number"
+              id="hours"
+              name="hours"
+              min="1"
+              max="24"
+              placeholder="예) 5시간"
+              required
+              class="hours"
+            />
+            <p class="center">시간씩 훈련할 것이다.</p>
+          </div>
+          <button type="submit" class="btn-common">
+            나는 며칠동안 훈련을 해야 1만 시간이 될까?
+          </button>
+        </form>
+        <!-- 버튼 출력결과 -->
+        <div id="result-group" class="result-group col-center hidden">
+          <p id="result-topic" class="center result"></p>
+          <p id="result-hours" class="center result"></p>
+        </div>
+      </section>
+      <section id="button-group" class="button-group center hidden">
+        <button id="train-btn" class="btn-common">훈련하러가기 GO! GO!</button>
+        <button id="share-btn" class="btn-common">공유하기</button>
+      </section>
+      <!-- 훈련하러가기 모달-->
+      <div id="train-modal" class="modal" style="display: none">
+        <div class="modal-content col-center">
+          <h2 class="sr-only">화이팅 팝업창</h2>
+          <p><em>화이팅!!♥♥♥</em></p>
+          <p>당신의 꿈을 응원합니다!</p>
+          <img src="img/licat.png" alt="응원하는 라이켓" />
+          <button
+            id="close-train-modal"
+            style="cursor: pointer"
+            class="btn-common size"
+          >
+            종료하고 진짜 훈련하러 가기 GO!GO!
+          </button>
+        </div>
+      </div>
+
+      <!-- 커스텀 공유 모달 (초기에는 숨김) -->
+      <div id="share-modal" class="modal" style="display: none">
+        <div class="modal-content">
+          <span class="close" id="close-modal" style="cursor: pointer"
+            >&times;</span
+          >
+          <p>공유할 방법을 선택하세요</p>
+          <div class="share-icons">
+            <!-- 예시: 링크 복사 -->
+            <button id="copy-link">링크 복사</button>
+            <!-- 예시: 트위터 공유 -->
+            <a href="#" id="twitter-share" target="_blank">트위터 공유</a>
+            <!-- 예시: 카카오톡 공유 (카카오 SDK 필요) -->
+            <!-- <a href="#" id="kakao-share">카카오톡 공유</a> -->
+          </div>
+          <span id="copy-alert" style="display: none; color: green"
+            >링크가 복사되었습니다!</span
+          >
+        </div>
+      </div>
+    </main>
+    <footer class="col-center">
+      <img src="img/logo-m.png" alt="weniv logo" />
+      <p class="col-center">
+        본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 위니브에 있습니다.
+      </p>
+      <p class="col-center">
+        수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
