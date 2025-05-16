@@ -61,7 +61,6 @@ header {
 .nav-list li a {
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   vertical-align: middle;
 }
 
@@ -98,14 +97,12 @@ section:nth-of-type(1) {
   font-weight: 700;
   font-size: 48px;
   line-height: 1.2;
-  letter-spacing: 0%;
   vertical-align: middle;
 }
 
 .section-1-contents > p {
   font-size: 16px;
   line-height: 1.2;
-  letter-spacing: 0%;
   vertical-align: middle;
 }
 
@@ -157,7 +154,6 @@ main > section:nth-of-type(1) > div > h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 100%;
-  letter-spacing: 0%;
   vertical-align: middle;
 }
 
@@ -166,7 +162,6 @@ main > section:nth-of-type(1) > div > p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
-  letter-spacing: 0%;
   vertical-align: middle;
 }
 
@@ -179,7 +174,6 @@ main > section:nth-of-type(2) > h2 {
   font-weight: 700;
   font-size: 48px;
   line-height: 100%;
-  letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
   color: var(--point-color);
@@ -189,7 +183,6 @@ main > section:nth-of-type(2) > p {
   margin-top: 40px;
   font-size: 16px;
   line-height: 1.2;
-  letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
 }
@@ -252,7 +245,6 @@ main > section:nth-of-type(3) > div > h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 100%;
-  letter-spacing: 0%;
   vertical-align: middle;
   color: var(--main-color);
 }
@@ -261,7 +253,6 @@ main > section:nth-of-type(3) > div > p {
   margin-top: 18px;
   font-size: 14px;
   line-height: 100%;
-  letter-spacing: 0%;
   vertical-align: middle;
   color: var(--main-color);
 }
@@ -288,7 +279,6 @@ input:focus {
   outline: none;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
   vertical-align: middle;
 }
 
@@ -391,42 +381,54 @@ footer > ul > li > a > img {
 }
 
 /* 구독하기 모달 */
-.modal {
+.modal-overlay {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
+.modal-overlay.show {
+  display: flex;
+}
+
+/* 모달 박스 */
 .modal {
   position: relative;
   width: 600px;
   height: 400px;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* 배경 이미지 */
+/* 모달 내부 요소 (기존 스타일 유지) */
 .modal-bg {
-  position: absolute;
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   background: url("../img/modal-bg-img.png");
-  z-index: 1;
+  z-index: 100;
 }
 
-/* 고양이 이미지 */
 .modal-cat {
   position: absolute;
   width: 110px;
   height: 112px;
   left: 245px;
   top: 60px;
-  z-index: 2;
+  z-index: 200;
 }
-
-/* 제목 */
 .modal-title {
   position: absolute;
   width: 212px;
@@ -434,7 +436,6 @@ footer > ul > li > a > img {
   left: 194px;
   top: 196px;
   font-family: "Spoqa Han Sans Neo", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 45px;
@@ -443,10 +444,8 @@ footer > ul > li > a > img {
   justify-content: center;
   text-align: center;
   color: #d97652;
-  z-index: 2;
+  z-index: 200;
 }
-
-/* 설명 */
 .modal-desc {
   position: absolute;
   width: 383px;
@@ -454,7 +453,6 @@ footer > ul > li > a > img {
   left: 108px;
   top: 254px;
   font-family: "Spoqa Han Sans Neo", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -462,10 +460,8 @@ footer > ul > li > a > img {
   align-items: center;
   justify-content: center;
   color: #000;
-  z-index: 2;
+  z-index: 200;
 }
-
-/* 버튼 */
 .ok-btn {
   position: absolute;
   width: 189px;
@@ -473,31 +469,19 @@ footer > ul > li > a > img {
   left: 205px;
   top: 310px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
   padding: 15px 29px;
-  gap: 10px;
   background: #d97652;
   border-radius: 40px;
   border: none;
   cursor: pointer;
-  z-index: 2;
-  /* transition: background 0.2s; */
+  z-index: 200;
 }
 .ok-btn:hover {
   background: #c96545;
 }
 .ok-btn span {
-  width: 131px;
-  height: 20px;
   font-family: "Spoqa Han Sans Neo", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   color: #fff;
 }

@@ -27,3 +27,47 @@ window.addEventListener("scroll", () => {
 btnTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// 모달 구현부
+// 요소 선택
+const form = document.querySelector('form[action="subscribe"]');
+const emailInput = document.getElementById("subscribe-email");
+const modalOverlay = document.querySelector(".modal-overlay");
+const okBtn = document.querySelector(".ok-btn");
+
+// 이메일 유효성 검사 함수
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// 폼 제출 이벤트
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = emailInput.value.trim();
+
+  if (!email) {
+    alert("이메일을 입력해주세요.");
+    emailInput.focus();
+    return;
+  }
+  if (!isValidEmail(email)) {
+    alert("올바른 이메일 형식이 아닙니다.");
+    emailInput.focus();
+    return;
+  }
+
+  // 모달 표시
+  modalOverlay.classList.add("show");
+});
+
+// OK 버튼 클릭 시 모달 닫기
+okBtn.addEventListener("click", function () {
+  modalOverlay.classList.remove("show");
+});
+
+// 오버레이 클릭 시 모달 닫기
+modalOverlay.addEventListener("click", function (e) {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove("show");
+  }
+});
