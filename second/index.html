@@ -39,7 +39,7 @@
         <!-- 모바일 메뉴 (오른쪽 슬라이드) -->
         <nav class="mobile-menu">
           <button class="close-btn" aria-label="모바일 메뉴 닫기">
-            &times;
+            <img src="img/arrow-right.svg" alt="모바일 메뉴 닫기 버튼" />
           </button>
           <ul>
             <li><a href="#">Home</a></li>
@@ -115,31 +115,54 @@
         </div>
         <form action="subscribe">
           <div class="mail-icon"></div>
-          <input type="email" name="subscribe-email" id="subscribe-email" />
-          <button class="btn-type-1 download">Subscribe</button>
+          <input
+            type="email"
+            name="subscribe-email"
+            id="subscribe-email"
+            placeholder="Enter your e-mail address"
+          />
+          <button class="btn-type-1 download subscribe">Subscribe</button>
         </form>
       </section>
       <div class="hodu-bg-img"></div>
     </main>
     <div class="btn-top"></div>
     <footer>
-      <img src="img/logo.svg" alt="호두 로고 이미지" class="footer-logo" />
-      <ul class="sns-btn-group">
+      <div class="footer-group">
+        <img src="img/logo.svg" alt="호두 로고 이미지" class="footer-logo" />
+        <ul class="sns-btn-group">
+          <li>
+            <a
+              ><img src="img/icon-blog.png" alt="네이버 블로그 바로가기 버튼"
+            /></a>
+          </li>
+          <li>
+            <a
+              ><img src="img/icon-insta.png" alt="인스타그램 바로가기 버튼"
+            /></a>
+          </li>
+          <li>
+            <a
+              ><img src="img/icon-facebook.png" alt="페이스북 바로가기 버튼"
+            /></a>
+          </li>
+          <li>
+            <a><img src="img/icon-youtube.png" alt="유뷰트 바로가기 버튼" /></a>
+          </li>
+        </ul>
+      </div>
+      <ul class="mobile-footer-menu">
         <li>
-          <a
-            ><img src="img/icon-blog.png" alt="네이버 블로그 바로가기 버튼"
-          /></a>
+          <a>About</a>
         </li>
         <li>
-          <a><img src="img/icon-insta.png" alt="인스타그램 바로가기 버튼" /></a>
+          <a>Blog</a>
         </li>
         <li>
-          <a
-            ><img src="img/icon-facebook.png" alt="페이스북 바로가기 버튼"
-          /></a>
+          <a>Support</a>
         </li>
         <li>
-          <a><img src="img/icon-youtube.png" alt="유뷰트 바로가기 버튼" /></a>
+          <a>Terms of Use</a>
         </li>
       </ul>
     </footer>
