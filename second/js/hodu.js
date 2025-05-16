@@ -71,3 +71,34 @@ modalOverlay.addEventListener("click", function (e) {
     modalOverlay.classList.remove("show");
   }
 });
+
+// 햄버거 시작
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+const menuOverlay = document.querySelector(".menu-overlay");
+const closeBtn = document.querySelector(".close-btn");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+
+// 햄버거 버튼 클릭 시 토글
+hamburgerBtn.addEventListener("click", () => {
+  const isOpen = mobileMenu.classList.contains("active");
+  if (isOpen) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// 닫기 버튼, 오버레이, 메뉴 내 링크 클릭 시 모두 닫기
+closeBtn.addEventListener("click", closeMenu);
+menuOverlay.addEventListener("click", closeMenu);
+mobileMenuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+function openMenu() {
+  mobileMenu.classList.add("active");
+  menuOverlay.classList.add("active");
+}
+function closeMenu() {
+  mobileMenu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+}

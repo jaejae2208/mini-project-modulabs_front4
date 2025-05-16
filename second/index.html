@@ -27,7 +27,28 @@
             <li><a href="#">Support</a></li>
           </ul>
         </nav>
-        <button class="btn-type-1 download">Download</button>
+        <button class="btn-type-1 download li-down">Download</button>
+
+        <!-- 햄버거 버튼 (모바일 전용) -->
+        <button class="hamburger-btn" aria-label="모바일 메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- 모바일 메뉴 (오른쪽 슬라이드) -->
+        <nav class="mobile-menu">
+          <button class="close-btn" aria-label="모바일 메뉴 닫기">
+            &times;
+          </button>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+          <button class="btn-type-1 download">Download</button>
+        </nav>
+        <div class="menu-overlay"></div>
       </header>
       <section>
         <div class="section-1-contents">
