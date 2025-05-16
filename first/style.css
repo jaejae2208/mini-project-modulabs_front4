@@ -186,7 +186,8 @@ form {
   margin-top: 100px;
 }
 
-form > div > p {
+form > div > p,
+.input-line > p {
   font-family: "Gmarket Sans 400";
   font-size: 24px;
   line-height: 100%;
@@ -266,7 +267,17 @@ input:focus::-ms-input-placeholder {
 }
 
 .second-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
+  gap: 10px;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 form > button {
@@ -276,7 +287,8 @@ form > button {
   height: 64px;
 }
 
-.btn-common {
+.btn-common,
+.btn-commin > span {
   position: relative;
   font-family: "Gmarket Sans 500";
   font-size: 24px;
@@ -480,4 +492,449 @@ footer > p {
   vertical-align: middle;
 
   color: var(--main-color);
+}
+
+/* 반응형 */
+@media only screen and (max-width: 360px) {
+  /* 공통 */
+  /* header 정렬 */
+  header {
+    height: 130px;
+    margin-top: 40px;
+    background-color: var(--main-color);
+  }
+
+  /* 1만 시간의 법칙 타이틀 */
+  header > h1 > img:first-child {
+    width: 109.23px;
+    height: 110.38px;
+  }
+
+  header > h1 > img:last-child {
+    width: 278px;
+    height: 54.94px;
+  }
+
+  main {
+    margin-top: 32px;
+  }
+
+  /* 인용구 section */
+  .quote > q {
+    width: 297px;
+    height: 24px;
+
+    font-family: "OTEnjoystoriesBA 700";
+    font-size: 22px;
+    line-height: 40px;
+    color: #f5df4d;
+  }
+
+  .quote-group {
+    position: relative;
+    width: 290px;
+    height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  .quote-group::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 18px;
+
+    background: url("img/66.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .quote-group::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 18px;
+    background: url("img/99.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .quote-group > p {
+    font-family: "Gmarket Sans 400";
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    color: var(--second-main-color);
+  }
+
+  em {
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--second-main-color);
+  }
+
+  /* 폼 태그 */
+  form {
+    margin-top: 60px;
+  }
+
+  form > div > p,
+  .input-line > p {
+    font-family: "Gmarket Sans 400";
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    color: var(--second-main-color);
+  }
+
+  input {
+    width: 156px;
+    height: 38px;
+
+    font-family: "Gmarket Sans 400";
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+
+    color: black;
+
+    background: var(--second-main-color);
+    border-radius: 8px;
+  }
+
+  input::placeholder {
+    font-family: "Gmarket Sans 400";
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+
+    color: var(--sub-color);
+  }
+
+  input:focus {
+    font-family: "Gmarket Sans 400";
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+
+    color: black;
+  }
+  /* input 포커스 시 placeholder 투명 */
+  /* Chrome, Safari, Opera, Edge (Webkit) */
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  /* Firefox 19+ */
+  input:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  /* Firefox 4-18 */
+  input:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  /* IE 10+ */
+  input:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  /* Edge */
+  input:focus::-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .topic,
+  .hours {
+    padding: 12px 35px;
+  }
+
+  .first-line,
+  .second-line {
+    gap: 12px;
+  }
+
+  .second-line {
+    margin-top: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .second-line > p {
+    margin-bottom: 12px;
+  }
+  .input-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .second-line > p {
+    text-align: left;
+    margin: 0;
+  }
+
+  /* 폼 내의 버튼 */
+  form > button {
+    margin-top: 80px;
+
+    width: 240px;
+    height: 72px;
+  }
+
+  .btn-common,
+  .btn-commin > span {
+    position: relative;
+    font-family: "Gmarket Sans 500";
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    color: var(--main-color);
+    background: var(--point-color);
+
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .second-line + button::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    left: 100%;
+    margin-left: 7px;
+    margin-top: 14px;
+    transform: translateY(-50%);
+    width: 43px;
+    height: 48px;
+    background: url("img/click.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  /* 결과 후 버튼 그룹 */
+  .btn-share {
+    font-family: "Gmarket Sans 500";
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    color: var(--main-color);
+    background: var(--second-main-color);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .result-group {
+    margin-top: 68px;
+    gap: 22px;
+  }
+
+  .result-group > p {
+    font-family: "Gmarket Sans 400";
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-align: center;
+    color: var(--second-main-color);
+
+    gap: 12px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .highlight {
+    font-family: "Gmarket Sans 700";
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+
+  .button-group {
+    margin-top: 52px;
+    width: 313px;
+    height: 46px;
+    gap: 8px;
+  }
+
+  .button-group > button:first-child {
+    width: 203px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .button-group > button:last-child {
+    width: 102px;
+    height: 46px;
+
+    background: var(--second-main-color);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+
+    font-family: "Gmarket Sans 500";
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  footer {
+    margin-top: 60px;
+    margin-bottom: 48px;
+  }
+
+  footer > img {
+    margin-bottom: 20px;
+    width: 125px;
+    height: 28px;
+  }
+
+  footer p:last-child {
+    margin-top: 3px;
+  }
+
+  footer > p {
+    font-family: "Noto Sans KR";
+    font-weight: 400px;
+    font-size: 9px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--second-main-color);
+  }
+
+  /* 모달 */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: var(--second-main-color);
+    border-radius: 8px;
+    min-width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 42px;
+    padding-left: 40px;
+    padding-right: 42px;
+  }
+
+  .modal-content > img {
+    width: 240px;
+    height: 188px;
+  }
+
+  .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+  }
+
+  .share-icons {
+    margin: 16px 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .size {
+    margin-top: 24px;
+    border-radius: 12px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+  }
+
+  .modal-content > p > em {
+    font-family: "OTEnjoystoriesBA 700";
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    color: var(--main-color);
+  }
+
+  .modal-content p:nth-of-type(2) {
+    font-family: "OTEnjoystoriesBA 700";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    color: var(--main-color);
+  }
+
+  /* 모바일(예: 768px 이하)에서는 줄바꿈 */
+  .mobile-br {
+    display: inline;
+  }
+  .mobile-br::after {
+    content: "\A";
+    white-space: pre;
+  }
 }

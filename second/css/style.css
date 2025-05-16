@@ -1,0 +1,503 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+/* 컬러 지정 */
+:root {
+  --main-color: #ffffff;
+  --second-main-color: #f2e9d8;
+  --sub-color: #263140;
+  --point-color: #d97652;
+  --text-color: #000000;
+}
+
+/* 공통버튼 */
+.btn-type-1 {
+  width: 140px;
+  height: 50px;
+  background: var(--point-color);
+  border-radius: 40px;
+}
+
+body {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  position: relative;
+}
+
+.sub-bg-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 902px;
+  max-width: 1920px;
+  background-color: var(--second-main-color);
+  z-index: 100;
+}
+
+header {
+  margin-top: 31px;
+  margin-left: 0px;
+
+  height: 102px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  height: 40px;
+}
+
+.nav-list {
+  margin-left: 756px;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-list li a {
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+header > button {
+  margin-left: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+section:nth-of-type(1) {
+  margin-top: 134px;
+  width: 1280px;
+  height: 766px;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 117px;
+  margin-top: 32px;
+}
+
+.section-1-contents {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.section-1-contents > h2 {
+  width: 748px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.section-1-contents > p {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.section-1-contents > button {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+section:nth-of-type(1) > img {
+  width: 415px;
+  height: 890px;
+  align-self: flex-start;
+  justify-self: flex-end;
+  object-fit: cover;
+}
+
+/* 메인시작 */
+main {
+  background-color: var(--main-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+}
+
+main > section:nth-of-type(1) {
+  width: 1280px;
+  height: 390px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 110px;
+}
+
+main > section:nth-of-type(1) > img {
+  width: 660px;
+  height: 390px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+main > section:nth-of-type(1) > div > h2 {
+  width: 510px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+main > section:nth-of-type(1) > div > p {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+main > section:nth-of-type(2) {
+  width: 1280px;
+  margin-top: 120px;
+}
+
+main > section:nth-of-type(2) > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--point-color);
+}
+
+main > section:nth-of-type(2) > p {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+main > section:nth-of-type(2) > p > em {
+  color: var(--point-color);
+  font-weight: 700;
+}
+
+.cat-img {
+  margin-top: 88px;
+  display: flex;
+  justify-content: space-between;
+  object-fit: cover;
+}
+
+.cat-img > img {
+  width: 378px;
+  height: 378px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+main > section:nth-of-type(2) > article:nth-of-type(2) {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+main > section:nth-of-type(2) > article:nth-of-type(2) > p {
+  height: 64px;
+  line-height: 1.2;
+}
+
+main > section:nth-of-type(2) > article:nth-of-type(2) > button {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+main > section:nth-of-type(3) {
+  margin-top: 90px;
+  height: 200px;
+  width: 1280px;
+  display: flex;
+  align-items: center;
+  gap: 143px;
+  background-color: var(--sub-color);
+  border-radius: 30px;
+  position: relative;
+  z-index: 300;
+}
+
+main > section:nth-of-type(3) > div {
+  margin-left: 58px;
+}
+
+main > section:nth-of-type(3) > div > h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--main-color);
+}
+
+main > section:nth-of-type(3) > div > p {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--main-color);
+}
+
+main > section:nth-of-type(3) > form {
+  width: 530px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: var(--main-color);
+  border-radius: 60px;
+  padding: 5px;
+}
+
+input,
+input:focus {
+  border: none;
+  height: 24px;
+  width: 325px;
+  margin-left: 10px;
+
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 400;
+  outline: none;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.mail-icon::after {
+  margin-left: 38px;
+  content: " ";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/mail.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main > section:nth-of-type(3) > form > button {
+  width: 136px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+.btn-top {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  border: 1px solid #c4c4c4;
+  color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  user-select: none;
+}
+
+.btn-top::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-left: 4px solid #c4c4c4;
+  border-bottom: 4px solid #c4c4c4;
+  transform: rotate(135deg) translate(25%, -150%);
+}
+
+.btn-top:hover::before {
+  border-left: 3px solid #767676;
+  border-bottom: 3px solid #767676;
+}
+
+.hodu-bg-img {
+  margin-top: -94px;
+  width: 99vw;
+  max-width: 1920px;
+  height: 340px;
+  background: linear-gradient(
+      0deg,
+      rgba(242, 233, 216, 0.6),
+      rgba(242, 233, 216, 0.6)
+    ),
+    url("../img/img_5.jpg");
+  background-size: 1920px auto;
+  background-position: 50% 37%;
+  position: relative;
+  z-index: 200;
+}
+
+footer {
+  margin-top: 0;
+  width: 1280px;
+  height: 160px;
+  padding: 45px 0px;
+  display: flex;
+  justify-content: space-around;
+  gap: 826px;
+}
+
+footer > .footer-logo {
+  width: 226px;
+  height: 70px;
+  margin-left: 0;
+}
+
+footer > ul {
+  display: flex;
+  gap: 20px;
+  justify-self: end;
+  align-items: center;
+}
+
+footer > ul > li > a > img {
+  width: 42px;
+  height: 42px;
+}
+
+/* 구독하기 모달 */
+.modal {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* 배경 이미지 */
+.modal-bg {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  left: 0;
+  top: 0;
+  background: url("../img/modal-bg-img.png");
+  z-index: 1;
+}
+
+/* 고양이 이미지 */
+.modal-cat {
+  position: absolute;
+  width: 110px;
+  height: 112px;
+  left: 245px;
+  top: 60px;
+  z-index: 2;
+}
+
+/* 제목 */
+.modal-title {
+  position: absolute;
+  width: 212px;
+  height: 46px;
+  left: 194px;
+  top: 196px;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #d97652;
+  z-index: 2;
+}
+
+/* 설명 */
+.modal-desc {
+  position: absolute;
+  width: 383px;
+  height: 18px;
+  left: 108px;
+  top: 254px;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  z-index: 2;
+}
+
+/* 버튼 */
+.ok-btn {
+  position: absolute;
+  width: 189px;
+  height: 50px;
+  left: 205px;
+  top: 310px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 15px 29px;
+  gap: 10px;
+  background: #d97652;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  /* transition: background 0.2s; */
+}
+.ok-btn:hover {
+  background: #c96545;
+}
+.ok-btn span {
+  width: 131px;
+  height: 20px;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}

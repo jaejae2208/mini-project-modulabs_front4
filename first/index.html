@@ -44,19 +44,21 @@
           </div>
           <div class="second-line center">
             <p class="center">그래서 앞으로 매일 하루에</p>
-            <input
-              type="number"
-              id="hours"
-              name="hours"
-              min="1"
-              max="24"
-              placeholder="예) 5시간"
-              required
-              class="hours"
-            />
-            <p class="center">시간씩 훈련할 것이다.</p>
+            <span class="input-line">
+              <input
+                type="number"
+                id="hours"
+                name="hours"
+                min="1"
+                max="24"
+                placeholder="예) 5시간"
+                required
+                class="hours"
+              />
+              <p class="center">시간씩 훈련할 것이다.</p>
+            </span>
           </div>
-          <button type="submit" class="btn-common">
+          <button class="btn-common">
             나는 며칠동안 훈련을 해야 1만 시간이 될까?
           </button>
         </form>
@@ -82,7 +84,7 @@
             style="cursor: pointer"
             class="btn-common size"
           >
-            종료하고 진짜 훈련하러 가기 GO!GO!
+            종료하고 진짜<span class="mobile-br"> </span>훈련하러 가기 GO!GO!
           </button>
         </div>
       </div>
